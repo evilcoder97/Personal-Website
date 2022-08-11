@@ -13,7 +13,7 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-					<section class="intro">
+					<section class="intro"id='intro'>
 						<header>
 							<h1>Pradyot's Website</h1>
 							<p><u>Welcome to my website<div>Hope You like it!</div></u></p>
@@ -27,7 +27,7 @@
 					</section>
 
 				<!-- About Section -->
-					<section id="first">
+					<section id="first" id="aboutme">
 						<header>
 							<h2>About Me!</h2>
 						</header>
@@ -124,11 +124,16 @@
 									</div>
 								</section>
 
-							<!-- Section -->
+							<!-- Favourite Programing Section -->
 								<section>
 									<header>
-										<h3>Lorem gravida</h3>
-										<p>Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aenean ornare velit lacus, ac varius sed enim lorem ullamcorper dolore.  ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis.</p>
+										<h3>My Favourite Programming Language</h3>
+										<p align="center">Although There are many preferences for programming langauge but my Favourite programming languages are :</p>
+										<ul type="diamond">
+											<li class="programming-lang" align="left">HTML, CSS & JavaScript</li>
+											<li class="programming-lang" align="left">Python</li>
+											<li class="programming-lang" align="left">Go</li>
+										</ul>
 									</header>
 									<div class="content">
 										<div class="gallery">
@@ -145,13 +150,13 @@
 				<!-- Section -->
 					<section>
 						<header>
-							<h2>Duis sed adpiscing veroeros amet</h2>
+							<h2>Thank You!</h2>
 						</header>
 						<div class="content">
-							<p><strong>Proin tempus feugiat</strong> sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.</p>
+							<p>So I hope you <strong>loved my Portfolio Website</strong><strong>&nbsp;<u>Do Message me!</u></strong> </p>
 							<ul class="actions">
-								<li><a href="#" class="button primary large">Back To Start</a></li>
-								<li><a href="#" class="button large">Learn More</a></li>
+								<li><a href="#intro" class="button primary large">Back To Start</a></li>
+								<li><a href="#aboutme" class="button large">Learn More</a></li>
 							</ul>
 						</div>
 					</section>
@@ -161,8 +166,8 @@
 							<h2>Get in touch</h2>
 						</header>
 						<div class="content">
-							<p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
-							<form>
+							<p><strong>Send Message!</strong>&nbsp; Using the below form or you can come in touch using the phone number or the email-address.</p>
+							<form onsubmit="SendMessage(); reset(); return false;">
 								<div class="fields">
 									<div class="field half">
 										<input type="text" name="name" id="name" placeholder="Name" />
@@ -210,14 +215,31 @@
 					<div class="copyright">&copy;  All rights reserved. </div>
 
 			</div>
+			<script src="https://smtpjs.com/v3/smtp.js"></script>
+			<script>
+				function SendMessage(){
+					Email.send({
+						Host: "smtp.gmail.com",
+						Username: "coderpradyotsinha@gmail.com",
+						Password: "Pradee@099",
+						To: 'coderpradyotsinha@gmail.com',
+						From: document.getElementById('email').value,
+						Subject: "New Message From Enquiry",
+						Body: "And this is the body"
+					}).then(
+						message => alert(message)
+					);
+				}
+			</script>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
+			<script src="assets/js/util.js"></script> 
 			<script src="assets/js/main.js"></script>
 
 	</body>
+	<!--Thank You!-->
 </html>
